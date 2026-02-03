@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const json = await safeJson(response);
+    const json = await safeJson<any>(response);
     
     // Check if the response has the expected structure
     // API returns: { success: true, data: { lists: [...] } }
